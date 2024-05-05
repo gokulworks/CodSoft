@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traveling</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="nav_links">
+            <li class="link"><a href="#" >Home</a></li>
+            <li class="link"><a href="#" >About Us</a></li>
+            <li class="link"><a href="#" >E-Ticket</a></li>
+            <li class="link"><a href="#" >Journey</a></li>
+            <li class="link"><a href="#" >Contact</a></li>
+            <li ><a href="#"><i class="fa-solid fa-bars" id="burger" onclick="showSidebar()"></i></a></li>
+        </ul>
+        <ul class="sidebar">
+            <li><a href="#"><i class="fa-solid fa-xmark" id="xmark" onclick="closeSidebar()"></i></a></li>
+            <li class="link"><a href="#" >Home</a></li>
+            <li class="link"><a href="#" >About Us</a></li>
+            <li class="link"><a href="#" >E-Ticket</a></li>
+            <li class="link"><a href="#" >Journey</a></li>
+            <li class="link"><a href="#" >Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="left-container">
+            <div class="left-content">
+                <h1>Best guide for you</h1>
+                <p>Our team of experts has scoured collection of handpicked destination and insider tips to ensure your journey is extraordinary.</p>
+
+            </div>
+        </div>
+        <div class="rignt-container">
+            
+            <div class="right-content">
+                    <h1>Enjoy</h1>
+                    <h4>Travelling moment</h4>
+                    <p>Welcome to our travel website, where we pride ourselves on being the best guide for you in your wanderlust adventures. Whether you're seeking sun-soaked beaches, or thrilling outdoor escapades, we've got you covered.
+                    </p>
+                    <div class="buttons">
+                        <button class="btn first">Explore</button>
+                        <button class="btn second">See More</button>
+                    </div>
+                    <div class="socials">
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                        <span><i class="fa-brands fa-x-twitter"></i></span>
+                        <span><i class="fa-brands fa-facebook"></i></span>
+                       
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let sidebar=document.querySelector(".sidebar");
+        sidebar.style.display="none";
+        let burger=document.querySelector("#burger");
+        let xmark=document.querySelector("#xmark")
+        let link=document.querySelector(".link_a")
+        function showSidebar(){
+            sidebar.style.display="flex";
+        }
+
+        function closeSidebar(){
+            sidebar.style.display="none";
+        }
+         
+        function checkWidth(){
+            let windoWidth=window.innerWidth;
+
+            if(windoWidth<600){
+                burger.style.display="flex";
+            }
+            else{
+                burger.style.display="none";
+              
+            }
+        }
+
+        window.addEventListener("resize",checkWidth);
+
+    </script>
+</body>
+
+
+</html>
